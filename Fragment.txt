@@ -1,0 +1,32 @@
+//✅ How to Use React Fragments
+//1. Standard Syntax:
+import React from 'react';
+
+function Demo() {
+  return (
+    <React.Fragment>
+      <h1>Hello</h1>
+      <p>This is a fragment</p>
+    </React.Fragment>
+  );
+}
+
+//2. Short Syntax (shorthand):
+function Demo() {
+  return (
+    <>
+      <h1>Hello</h1>
+      <p>This is a fragment</p>
+    </>
+  );
+}
+
+
+//✅ Fragments with key Prop
+//Sometimes, especially when mapping over a list, you might need to use a Fragment with a key:
+items.map(item => (
+  <React.Fragment key={item.id}>
+    <dt>{item.term}</dt>
+    <dd>{item.description}</dd>
+  </React.Fragment>
+));
